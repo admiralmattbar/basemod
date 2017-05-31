@@ -1,5 +1,6 @@
 package org.gsa.basemod;
 
+import org.gsa.basemod.init.ModCrafting;
 import org.gsa.basemod.init.ModItems;
 import org.gsa.basemod.proxy.ICommonProxy;
 
@@ -28,6 +29,8 @@ public class Main {
 	@EventHandler
 	public void init(FMLInitializationEvent event){
 		proxy.init();
+		
+		ModCrafting.register();
 	}
 	
 	@EventHandler
