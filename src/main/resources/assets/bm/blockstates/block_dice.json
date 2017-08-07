@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=down":  { "model": "bm:dice", "x": 180 },
+    "facing=up":    { "model": "bm:dice" },
+    "facing=north": { "model": "bm:dice" },
+    "facing=south": { "model": "bm:dice", "y": 180 },
+    "facing=west":  { "model": "bm:dice", "y": 270 },
+    "facing=east":  { "model": "bm:dice", "y": 90 }
+  }
+}

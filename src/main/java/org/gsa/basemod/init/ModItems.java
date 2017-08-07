@@ -1,7 +1,5 @@
 package org.gsa.basemod.init;
 
-import org.gsa.basemod.itemclasses.ItemBalls2U;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
@@ -13,14 +11,17 @@ public class ModItems {
 	public static Item balls2u;
 	
 	public static void init(){
-		balls2u = new ItemBalls2U();
+
+		balls2u = new Item().setRegistryName("item_balls2u").setUnlocalizedName("balls2u");
 	}
 	
 	public static void register(){
+
 		GameRegistry.register(balls2u);
 	}
 	
 	public static void registerRenders(){
+
 		registerRender(balls2u);
 	}
 	
