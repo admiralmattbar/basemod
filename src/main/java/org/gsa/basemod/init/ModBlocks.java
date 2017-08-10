@@ -4,25 +4,36 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import org.gsa.basemod.blockclasses.BlockDice;
+import org.gsa.basemod.blockclasses.BlockClimber;
+import org.gsa.basemod.blockclasses.BlockDiceFacer;
+import org.gsa.basemod.blockclasses.BlockFlamingo;
 
 public class ModBlocks {
 
     public static Block dice;
+    public static Block flamingo;
+    public static Block climber;
 
     public static void init(){
-        dice = new BlockDice(Material.ANVIL).setUnlocalizedName("dice").setRegistryName("block_dice");
+        dice = new BlockDiceFacer(Material.ANVIL).setUnlocalizedName("dice").setRegistryName("block_dice");
+        flamingo = new BlockFlamingo(Material.WOOD).setUnlocalizedName("flamingo").setRegistryName("block_flamingo").setCreativeTab(CreativeTabs.DECORATIONS);
+        climber = new BlockClimber().setUnlocalizedName("climber").setRegistryName("block_climber").setCreativeTab(CreativeTabs.MISC);
     }
 
     public static void register(){
         registerBlock(dice);
+        registerBlock(flamingo);
+        registerBlock(climber);
     }
 
     public static void registerRenders(){
         registerRender(dice);
+        registerRender(flamingo);
+        registerRender(climber);
     }
 
     public static void registerBlock(Block block){

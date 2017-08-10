@@ -6,14 +6,16 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.MoverType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class BlockDice extends BlockHorizontal {
+public class BlockDiceFacer extends BlockHorizontal {
 
-    public BlockDice(Material materialIn) {
+    public BlockDiceFacer(Material materialIn) {
         super(materialIn);
         setCreativeTab(CreativeTabs.DECORATIONS);
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
@@ -41,11 +43,17 @@ public class BlockDice extends BlockHorizontal {
         return this.getDefaultState().withProperty(FACING, EnumFacing.getHorizontal(meta));
     }
 
-
     @Override
     protected BlockStateContainer createBlockState(){
-        return new BlockStateContainer(this, new IProperty[] { FACING });
+        return new BlockStateContainer(this, new IProperty[]{FACING });
     }
 
+    @Override
+    public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
+        super.onEntityCollidedWithBlock(worldIn, pos, state, entityIn);
+        //entityIn.setPosition(entityIn.posX, entityIn.posY + 1.0D, entityIn.posZ);
+
+
+    }
 }
 
