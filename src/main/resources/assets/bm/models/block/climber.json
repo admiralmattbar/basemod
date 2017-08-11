@@ -1,6 +1,12 @@
 {
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "cm:blocks/dice1"
-  }
+    "parent": "block/cube",
+    "textures": {
+        "particle": "bm:blocks/climber1",
+        "down": "bm:blocks/climber1",
+        "up": "bm:blocks/climber2",
+        "north": "bm:blocks/climber3",
+        "south": "bm:blocks/climber1",
+        "west": "bm:blocks/climber2",
+        "east": "bm:blocks/climber3"
+    }
 }

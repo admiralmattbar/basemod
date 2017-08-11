@@ -1,5 +1,8 @@
 {
   "variants": {
-    "normal": { "model": "climber" }
+    "facing=north": { "model": "bm:climber", "y": 270 },
+    "facing=south": { "model": "bm:climber", "y": 90  },
+    "facing=east":  { "model": "bm:climber"},
+    "facing=west":  { "model": "bm:climber", "y": 180 }
   }
 }
